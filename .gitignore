@@ -1,3 +1,8 @@
+# not share
+1_LAB_ASSAYS/not_share/
+2_FIELD_TRIALS/not_share/
+3_ONFARM_TRIALS/not_share/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
