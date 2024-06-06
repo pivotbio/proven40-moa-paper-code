@@ -7483,18 +7483,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">lme4</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">lmerTest</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">emmeans</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">multcomp</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">multcompView</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
-
-<span class="nf">theme_set</span><span class="p">(</span><span class="n">ggthemes</span><span class="o">::</span><span class="nf">theme_few</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">),</span><span class="w"> </span><span class="n">strip.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">)))</span>
-<span class="n">myColorPalette</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"#005AB5"</span><span class="p">,</span><span class="s">"#DC3220"</span><span class="p">)</span>
-<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+<div class="highlight hl-r"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">'../load_environment.R'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7506,84 +7495,14 @@ a.anchor-link {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>-- <span class="ansi-bold">Attaching core tidyverse packages</span> ------------------------ tidyverse 2.0.0 --
-<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">dplyr    </span> 1.1.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">readr    </span> 2.1.4
-<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">forcats  </span> 1.0.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">stringr  </span> 1.5.0
-<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">ggplot2  </span> 3.4.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tibble   </span> 3.2.1
-<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">lubridate</span> 1.9.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tidyr    </span> 1.3.0
-<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">purrr    </span> 1.0.2     
--- <span class="ansi-bold">Conflicts</span> ------------------------------------------ tidyverse_conflicts() --
-<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
-<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
-<span class="ansi-cyan-fg">i</span> Use the conflicted package (<span class="ansi-blue-fg">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
-Loading required package: Matrix
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Pivot Bio, Inc.
+This code performs analyses supporting findings of the paper entitled:
+"Genetic remodeling of soil diazotrophs enables partial replacement of synthetic nitrogen fertilizer with biological nitrogen fixation in maize".
 
-
-Attaching package: 'Matrix'
-
-
-The following objects are masked from 'package:tidyr':
-
-    expand, pack, unpack
-
-
-
-Attaching package: 'lmerTest'
-
-
-The following object is masked from 'package:lme4':
-
-    lmer
-
-
-The following object is masked from 'package:stats':
-
-    step
-
-
-Loading required package: carData
-
-
-Attaching package: 'car'
-
-
-The following object is masked from 'package:dplyr':
-
-    recode
-
-
-The following object is masked from 'package:purrr':
-
-    some
-
-
-Loading required package: mvtnorm
-
-Loading required package: survival
-
-Loading required package: TH.data
-
-Loading required package: MASS
-
-
-Attaching package: 'MASS'
-
-
-The following object is masked from 'package:dplyr':
-
-    select
-
-
-
-Attaching package: 'TH.data'
-
-
-The following object is masked from 'package:MASS':
-
-    geyser
-
-
+##------ Thu Jun 06 10:00:16 2024 ------## 
+Loaded packages:  tidyverse, readxl, broom, foreach, nlme, lme4, lmerTest, glmmTMB, car, DHARMa, caret, emmeans, multcomp, ggpubr, scales, png, ggthemes and their dependencies.
+A complete list of packages used in the analysis is provided in the `packages_citations.txt` file.
 </pre>
 </div>
 </div>
@@ -7604,27 +7523,6 @@ The following object is masked from 'package:MASS':
 <span class="n">up</span><span class="o">$</span><span class="n">microbe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">up</span><span class="o">$</span><span class="n">microbe</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'UTC'</span><span class="p">,</span><span class="s">'PROVEN40'</span><span class="p">),</span><span class="w">  </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'Uninoculated Control'</span><span class="p">,</span><span class="s">'PROVEN40'</span><span class="p">))</span>
 <span class="n">up</span><span class="o">$</span><span class="n">stage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">up</span><span class="o">$</span><span class="n">stage</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'V8'</span><span class="p">,</span><span class="s">'R1'</span><span class="p">,</span><span class="s">'R6'</span><span class="p">))</span>
 <span class="n">up</span><span class="o">$</span><span class="n">n_rate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">up</span><span class="o">$</span><span class="n">n_rate</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="c1"># Helper function to check model assumptions   </span>
-<span class="n">check_assumptions</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">   </span><span class="nf">print</span><span class="p">(</span><span class="nf">plot</span><span class="p">(</span><span class="n">mod</span><span class="p">))</span><span class="w"> </span><span class="c1"># resid x pred</span>
-<span class="w">   </span><span class="nf">print</span><span class="p">(</span><span class="nf">plot</span><span class="p">(</span><span class="nf">density</span><span class="p">(</span><span class="nf">resid</span><span class="p">(</span><span class="n">mod</span><span class="p">))))</span><span class="w">  </span><span class="c1">#A density plot</span>
-<span class="w">   </span><span class="c1"># Make sure the residuals are normal</span>
-<span class="w">   </span><span class="nf">shapiro.test</span><span class="p">(</span><span class="nf">residuals</span><span class="p">(</span><span class="n">mod</span><span class="p">))</span><span class="w"> </span>
-<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -8774,20 +8672,6 @@ p = 0.92 </td><td>277.57401</td></tr>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">up_n_mod_full</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lmer</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">microbe</span><span class="o">*</span><span class="n">n_rate</span><span class="o">*</span><span class="n">stage</span><span class="o">*</span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">year</span><span class="o">:</span><span class="n">rep</span><span class="o">:</span><span class="n">n_rate</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">up_n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9458,9 +9342,9 @@ p = 0.91 </td><td>274.16041</td></tr>
 </thead>
 <tbody>
 <tr><td>R1</td><td>PROVEN40</td><td>2021</td><td>189.7032</td><td>4.784642</td><td>420.0408</td><td>180.52766</td><td>199.3450</td><td>PROVEN40 / Uninoculated Control</td><td>0.8976056</td><td>0.04318890</td><td>223.0124</td><td>1</td><td>-2.245099</td><td>0.02574280</td><td>10.2</td><td>Ndfa = 10.2%
-p = 0.026      </td><td>2.062464</td></tr>
+p = 0.026</td><td>2.062464</td></tr>
 <tr><td>R1</td><td>PROVEN40</td><td>2022</td><td>102.5846</td><td>2.646164</td><td>419.5553</td><td> 97.51291</td><td>107.9201</td><td>PROVEN40 / Uninoculated Control</td><td>0.8640633</td><td>0.07358159</td><td>214.0130</td><td>1</td><td>-1.715751</td><td>0.08765486</td><td>13.6</td><td>Ndfa = 13.6%
-p-value = 0.088</td><td>1.278412</td></tr>
+p = 0.088</td><td>1.278412</td></tr>
 </tbody>
 </table>
 </div>
