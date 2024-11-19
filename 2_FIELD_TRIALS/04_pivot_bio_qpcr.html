@@ -7480,7 +7480,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">'../load_environment.R'</span><span class="p">)</span>
@@ -7501,7 +7501,7 @@ a.anchor-link {
 This code performs analyses supporting findings of the paper entitled:
 "Genetic remodeling of soil diazotrophs enables partial replacement of synthetic nitrogen fertilizer with biological nitrogen fixation in maize".
 
-##------ Tue Jul 30 13:31:17 2024 ------## 
+##------ Wed Nov 06 13:28:14 2024 ------## 
 Loaded packages:  tidyverse, readxl, broom, foreach, nlme, lme4, lmerTest, glmmTMB, car, DHARMa, caret, emmeans, multcomp, ggpubr, scales, png, ggthemes and their dependencies.
 A complete list of packages used in the analysis is provided in the `packages_citations.txt` file.
 </pre>
@@ -7525,7 +7525,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">"./datasets/pivot_bio_trials_qpcr.csv"</span><span class="p">)</span><span class="w"> </span>
@@ -7587,7 +7587,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">qpcr</span><span class="o">$</span><span class="n">copies_per_g_fw</span><span class="p">)</span>
@@ -7628,7 +7628,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lmer</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">*</span><span class="n">target_strain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr</span><span class="p">)</span>
@@ -7642,7 +7642,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_1_sims</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">simulateResiduals</span><span class="p">(</span><span class="n">fittedModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr_mod_1</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
@@ -7686,7 +7686,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">qpcr</span><span class="o">$</span><span class="n">copies_per_g_fw</span><span class="m">+1</span><span class="p">))</span>
@@ -7712,7 +7712,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lmer</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">*</span><span class="n">target_strain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr</span><span class="p">)</span>
@@ -7726,7 +7726,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_2_sims</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">simulateResiduals</span><span class="p">(</span><span class="n">fittedModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr_mod_2</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
@@ -7752,7 +7752,7 @@ A complete list of packages used in the analysis is provided in the `packages_ci
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">testZeroInflation</span><span class="p">(</span><span class="n">qpcr_mod_2</span><span class="p">)</span>
@@ -7808,7 +7808,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glmmTMB</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">*</span><span class="n">target_strain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span>
@@ -7826,7 +7826,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_3_sims</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">simulateResiduals</span><span class="p">(</span><span class="n">fittedModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr_mod_3</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
@@ -7852,7 +7852,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">testZeroInflation</span><span class="p">(</span><span class="n">qpcr_mod_3</span><span class="p">)</span>
@@ -7891,7 +7891,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">BIC</span><span class="p">(</span><span class="n">qpcr_mod_2</span><span class="p">,</span><span class="n">qpcr_mod_3</span><span class="p">)</span>
@@ -7940,7 +7940,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glmmTMB</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">*</span><span class="n">target_strain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span>
@@ -7957,7 +7957,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_4_sims</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">simulateResiduals</span><span class="p">(</span><span class="n">fittedModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qpcr_mod_4</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">)</span>
@@ -7983,7 +7983,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">anova</span><span class="p">(</span><span class="n">qpcr_mod_3</span><span class="p">,</span><span class="n">qpcr_mod_4</span><span class="p">)</span>
@@ -8019,7 +8019,7 @@ alternative hypothesis: two.sided
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">VarCorr</span><span class="p">(</span><span class="n">qpcr_mod_3</span><span class="p">)</span>
@@ -8056,7 +8056,7 @@ Zero-inflation model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">VarCorr</span><span class="p">(</span><span class="n">qpcr_mod_4</span><span class="p">)</span>
@@ -8099,7 +8099,7 @@ Conditional model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># test for HOV across treatments</span>
@@ -8206,7 +8206,7 @@ Conditional model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glmmTMB</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">*</span><span class="n">target_strain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span>
@@ -8266,7 +8266,7 @@ Conditional model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">qpcr_mod_5</span>
@@ -8375,7 +8375,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">VarCorr</span><span class="p">(</span><span class="n">qpcr_mod</span><span class="p">)</span>
@@ -8412,7 +8412,7 @@ Zero-inflation model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_zi_means</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">emmeans</span><span class="p">(</span><span class="n">qpcr_mod</span><span class="p">,</span><span class="w">  </span><span class="n">trt.vs.ctrl</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">|</span><span class="n">target_strain</span><span class="p">,</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"zi"</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"response"</span><span class="p">)</span>
@@ -8426,7 +8426,7 @@ Zero-inflation model:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_zi_means</span><span class="o">$</span><span class="n">emmeans</span>
@@ -8467,7 +8467,7 @@ Intervals are back-transformed from the log[logit(mu + 1)] scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_zi_means</span><span class="o">$</span><span class="n">contrasts</span>
@@ -8506,7 +8506,7 @@ Tests are performed on the log[log odds ratio] scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Expected marginal means from the conditional model</span>
@@ -8521,7 +8521,7 @@ Tests are performed on the log[log odds ratio] scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_cond_means</span><span class="o">$</span><span class="n">emmeans</span>
@@ -8562,7 +8562,7 @@ Intervals are back-transformed from the log(mu + 1) scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_cond_means</span><span class="o">$</span><span class="n">contrasts</span>
@@ -8612,7 +8612,7 @@ Tests are performed on the log scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_cond_means_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">qpcr_mod_cond_means</span><span class="o">$</span><span class="n">contrasts</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -8706,7 +8706,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">qpcr_mod_cond_means_table</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">"asymp.L"</span><span class="p">,</span><span class="s">"lower."</span><span class="p">,</span><span class="nf">names</span><span class="p">(</span><span class="n">qpcr_mod_cond_means_table</span><span class="p">))</span>
@@ -8726,7 +8726,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">qpcr_mod_cond_means_table</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -8752,7 +8752,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">qpcr_mod_zi_means_table</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -8777,7 +8777,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
@@ -8817,7 +8817,7 @@ Warning message:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_comb_means</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">emmeans</span><span class="p">(</span><span class="n">qpcr_mod</span><span class="p">,</span><span class="w">  </span><span class="n">trt.vs.ctrl</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate</span><span class="o">|</span><span class="n">target_strain</span><span class="p">,</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"response"</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="w"> </span><span class="s">"response"</span><span class="p">)</span>
@@ -8849,7 +8849,7 @@ Disable this warning with 'allow.new.levels=TRUE'"
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_comb_means</span><span class="o">$</span><span class="n">emmeans</span>
@@ -8890,7 +8890,7 @@ Intervals are back-transformed from the log(mu + 1) scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_comb_means</span><span class="o">$</span><span class="n">contrasts</span>
@@ -8929,7 +8929,7 @@ Tests are performed on the log scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_comb_means_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">qpcr_mod_comb_means</span><span class="o">$</span><span class="n">contrasts</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -8961,7 +8961,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">qpcr_mod_comb_means_table</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gsub</span><span class="p">(</span><span class="s">"asymp.L"</span><span class="p">,</span><span class="s">"lower."</span><span class="p">,</span><span class="nf">names</span><span class="p">(</span><span class="n">qpcr_mod_comb_means_table</span><span class="p">))</span>
@@ -8977,7 +8977,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_mod_comb_means_table</span>
@@ -9019,7 +9019,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
@@ -9069,7 +9069,7 @@ Joining with `by = join_by(rate)`
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
@@ -9086,7 +9086,7 @@ Joining with `by = join_by(rate)`
 <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myColorPalette</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="nf">scale_shape_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">21</span><span class="p">,</span><span class="m">23</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="c1">#scale_x_continuous(breaks = 1:5, labels=parse(text=c("0","10^2","10^3","10^4","10^5"))) + </span>
-<span class="nf">labs</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Copies per g fresh root tissue"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"\nInoculation rate treatment"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Primer target:"</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Primer target:"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Copies per g fresh root tissue"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"\nInoculation rate treatment\n"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Primer target:"</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Primer target:"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.3</span><span class="p">,</span><span class="m">0.85</span><span class="p">)</span>
 <span class="p">)</span><span class="w"> </span>
 
@@ -9118,7 +9118,7 @@ Warning message:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
-<img alt="No description has been provided for this image" class="" height="360" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAALQCAMAAAB/mFOXAAAAY1BMVEUAAAAAWrUaGhpNTU1oaGh8fHyDg4OMjIyVlZWampqjo6Onp6evr6+ysrK5ubm9vb3BwcHHx8fJycnQ0NDR0dHY2NjZ2dncMiDe3t7h4eHk5OTp6enq6urv7+/w8PD19fX///811+M+AAAACXBIWXMAABJ0AAASdAHeZh94AAAgAElEQVR4nO2dDZuqrNfF1/+m92aqM3NOT01T+f0/5SOoia+AbkRt/67rGOFmwbSOiiiKiJk1CN0Axi8I3QDGLwjdAMYvsA/9Enn6kqSfh5VYnZ7NSSY0sI68iNzge5reCMmqOcmEBraB/4Rm8CZJX8TuN/rdiJ+mJBMcWMZ9iFNu8McqSR+UiRdxakoywYFlnPiKXgb/FenueifkgfYudk1JJjiwD80M/om3zSSd5siP+qT6YALQw+Dnahc5GJyk7WthKOhj8E7c2eCx08Pgk/gXscFjp4fB+m4+6U49855VOVmtjxkEIoNP6QnRoSlZrY8ZhD7HYC2dDGnsxKUpWa2PGQQig6OV2pQ3zclKfcwgUBl8l5cVDs/mZKU+ZhA6GUxSHzMIbPDMYYNnDhs8c9jgmcMGzxw2eOawwTOHDZ45bPDMYYNnDhs8c9jgmcMGzxw2eOawwTOHDZ45bPDMYYPHCIC6b9WE2TY2eGRA+1fMqUlIqw16bPCoUH4hSWZZ2bKakIssrAk2ODDQ9rdpQl+2GwyzbWxwYPJtNvdZWxq2YDZ49CBboppVFwA2eFrgteQteJZAX6KSxQZPHWhL9140Gzx6oC3TVDELlezC+rxkPWxwYLRtNs+LSpY3D3SwwWMHpXHJJLN4NM4CeKhygsCzPhscGHjWZ4MDA8/6bPDMYYNnDhs8c9jgmcMGzxw2eOawwTOHDZ45bPDMYYNnzmgNRsryWMx1rvG6cC7SqcxIGb3BscWFXOcaOxTpVCYEMIeM2ODk8yxwbA20FfJdJgQwh4ze4Ohc2ITdYYPtgwlwN1il4n97YJ/e4ILotsTiO4r+LLD4o4IeewGxvaXxKjYtjOT2hz/r+HN7LQaclxDHtKpcISszfpthDpmMwdv4N//MDI732zHXP8qJc5x1E4kr31EemxZOzFqmB/SzHvCtsvZKVFNgg3vgbvC33EUD4vrKhdr8tlhLk7ZqDx4fqB9RdIR45LG60BHLeNt8fKrgLOABeXiPdwYoKUzA2gSYQ0Zv8LdINqpjnhtvgZGyZ518SF+S1X+k5UD1zGqBm14+CfhM9uPnigIb3J0Op0l79a1gUHqsfW3Ua2SllnnsSyhNXL8/l3r5uNQ1qlVgg7vjarBYfyffstz8i/aR/29AxZ3k6239Wl8Uq1Ngg7vToZOlf+tqsOxCLbbHGxvsG18GN5ZMvm6xf5TLlwxurny8wBwyD4OX6vSntmShSHELXmrH4IICG9wdPwZ/qg51OurVYvC2YPCn6o0nveiCAhvcHT8GPwTWN3VKda4x+CY30HgX/ZDjG4884KFGO5Lz4IJCuSM+WmAOmYfB6ZhUdkpVEJJjWHIrlXwuCv8D9JEsXSEpM4HtGOaQmRisRpKxPldLRrcFhBp1lqvPck+cB8ix6M+qQlqGDe7AGO/owGQv78Mc8s4GqwOyHJ3chm5JV2AOeWeDl+oKRDLYPU1gDnlng696v2qSwBzyzgZHN9Wvmuz2ywbPHphD2OApA3MIGzxlYA5hg6cMzCFs8JSBOYQNnjIwh7DBUwbmEDZ4ysAcwgZPGZhDOhn8lZZ6nlZidbir5CFOnp7NyUp97fzXgn1D5w7MIV0Mvoik1HMlJCvp8CZJRo3JSn3t/Pe/RtjgFzCHdDD4n0gNPonDM3ruxIf0fPcb/W7ET1OyWl87bLANMIe4G/whTqnBK/XxlN8OysSLODUlq/W1wwbbAHOIu8HiKxIFm+S3nZAH2rvYNSWr9bXDBtsAc0inTlbB4B+5gaY58qM+Wa2vHTbYBphD+hu8Wz3tDFYdLjaYEphDehu8E5eIt+BAwBzS1+DE35AGJze33kT5zht5o+z2psdlU8v0derBDftHvn7898pqwBzSz+D7bpWcAiXdqWfesyonq/W142rwsuxvciO7mq+vuGr25evSBzeIW27wlMbaYA7pZfBltbsnqVN6QnRoSlbra8fR4GX5UTwP+ZiGxzq3/ZpOPiqu26qAfX7j7HdhEtrYgTmkj8G/+aaZDGmo/XV9slpfO24G7yuPWvqjnHvk2+Mxf7CDtq44SUJOP5zUPdIwh/Qx+CDEq2ecjFpuosZkpb52nAz+fPl4XABLeZtk9niGF5rB2jqBRCMrv5zSDtq7wUIz+C4vKxzUZYX6ZKW+dlwM/lbHUMlnchg9Kuf2yYTBlDW+t3HPSh6TtXWf6S46fejSsedT9YYG5pCxXi50MRgvg9VzWf7IuUbxhlzsZKXP6Eies5SvO8pelshstT5NHwkwh8zCYJFNH4u3y+MjzZXTUvZ5JwuQj8RTGfq6xPf0wPsn25KnAswhczD4Oz7ZSSz6fm2OycQy2ZEqntsmPatsXepy9v9ggUc0KWAOmYPB6ikM6V72O94kxbc8b8pWlgyGvu7Vi1bNuvV87OnwwBwyD4PjneurZ3w9JidO8vsjn/or0s12UVhXOE2a3B76jQyOTZN9poU80F5lzhXLh9Y9znfGx8K6tXpC5T4ZBNlOapBDAnPIXAxOxrKSx8+qA/JepfK5+49kUFLthPN12lBl/kDL6QBzyGwMTkajv+MToGWy1f5ZQOjj0/KywiI9Uufr8osNU3gmRxmYQ6Zv8DsDcwgbPGVgDmGDpwzMIWzwlIE5hA2eMjCHjNZgnrpiAcwhYzWYsQHmkLEazFuwDTCHjNbg/2uEDX4BcwgbPGVgDmGDpwzMIWzwlIE5hA2eMjCHsMFTBuYQNnjKwBwyfYObJp9Fn0g+5ctWlunbHMrzy7TXDhfeQPyKyguPEZhD5mJwZfKZvMMyrVK5lbxZuDS/7JHf0KEl9XlqeeExAnPITAyuTD5Td++ohJpZdtRu3tHml+3lVIfHUt6SpSW1eWqVwuMC5pB5GFydfLZOX4eU3U6Z75b1+WXJ1CT1CmItqU1gKRceGTCHzMLgdPJZdpOsvH89ex18yme+B6+ZX1a6b7o8Q+lztG91gDlkDga/Jp+t1W2Rt3QPm9u21l68UTO/7JyvVUltnlqp8NiAOWQOBr8mn32n9z6f0xVZyHGd97Fr5pct8ylqKqnNUysVHhswh8zC4HzymZQXi2yFFrVNN9ya2QvLvJO8TDvbr3lqxcKjA+aQORicTz47Qr6e8Jit0KKyuf7p/DLtbLji70tYlAuPDphD5mBwPvnsERu9z6YIFvu+6XhI2t1+GXxbiuykSUuWy4+1Gw1zyDwMfk0+2yI/CyqcJt2SvXh5D/0tlrdKUpunVig8PmAOmYnB6eQz9Z7ga2FFMlbxWCebeGl+2TU/f9aS2jy1QuHxAXPIXAzOxrIW+cZWHKpM7CvNL9vmg9NaUp+nphceHzCHzMbgdDT6qHrAhRWRNuusdDDVrj7oFyL0eWpacnzAHDJ9g98ZmEPY4CkDcwgbPGVgDmGDpwzMIaM1mGc2WABzyFgNZmyAOYQNnjIwh7DBUwbmEDZ4ysAcwgZPGZhD2OApA3MIGzxlYA5hg6cMzCFs8JSBOYQNnjIwh7DBUwbmEDZ4ysAcwgZPGZhD2OApA3MIGzxlYA5hg6cMzCFs8JSBOYQNnjIwh7DBUwbmEDZ4ysAcwgZPGZhD2gx+fC7lTA7Sx0SxwZTAHNJi8LfIZu0QPsGADaYE5pBmg2/ySQZqdrUgfKcfG0wJzCHNBqsHU6jJdt/5g8F6wwZTAnNIs8HqyWDJdEvCJxiwwZTAHNJssHKVDR41MIe0bcGP1Nob4UNm2GBKYA5pNnj/OgavCbvRbDAlMIc0G/wQscOxwec18IioYIMpgTmk5Tw4fTs2IAgfl8wGUwJzSOtQ5VE+tXH5Sbf9ssG0wBzCY9FTBuaQTgZ/paWeh5VYnZ5WyUp9TH9gDuli8CV7JO9GSFZWyUp9TH9gDmkb6NDQV/wTqcEXsfuNfjfixyJZrY/pD8wh7gZ/iFNq8EE5dxEni2S1PqY/MIeYd9G3Y/GtMuIre2r6Tsij613sLJLV+pj+wBxicww+li8XpgZrH8ak+hCi5oH6THdgDrEx+FF+2mo3g0v1Mf2BOcSqF12+msQGjwSYQ2wMvrLBIwXmEAuDr0vtXWFJIb2T9cy7Uy3Jan1Mf2AOsTtNuhVXpQaf0rOgg0WyWh/TH5hDbAzeXkurCgMdO3GxSFbrY/oDc0insejsoLpSJz4bq2SlPqY/MIf0MvguryUcnlbJSn1Mf2AOaTH4LN9fctNe00gBG0wJzCHNBicnRwt1Swddk9hgSmAOMdx0d5Y96G31hY6dYYMpgTmk2WD1Gse9fM/Ug/DNbmwwJTCHGG58X6g7ZvnG95ECc0i7wQ+kL9QlaxIbTAnMIe276G91S/SZ8N19bDAlMIe0dbL20Vpa+1gSvnyTDaYE5pDWmQ0xZ7mDJnz5JhtMCcwhbTMblljIIzDpyzfZYEpgDuEb36cMzCFs8JSBOYTHoqcMzCE8Fj1lYA7hsegpA3MIj0VPGZhDeCx6ysAcwmPRUwbmEB6LnjIwh/BY9JSBOYTHoqcMzCE8Fj1lYA7hocopA3MIGzxlYA5hg7tSfLDF61s14fGntRCuN1i2rfEhLL2YhcHQ/hVzahKkwwg1DTHABjujfg0kySwrW1YTcpGF0TfFHMK7aAug7W/ThL5sNxgef1oLYcNYdJqks2WaBiPKtkZkWdrSsAWP3+Dbu++ikS1RzaoLwOgNXqDIm18uxGs5ly34WvR3eauU68rEDe5wDI7GaLD6blHanckb7N6LZoNHD7RlmipmoZJdWJ+XJMZCmE+TLNC22TwvKlmenfSWE9WidFgIs8EW6OfBeWbxaJwFTGOo0h8TNXikwBzCBluA0A1oAuYQNtgChG5AEzCHsMFTBuYQHoueMjCH8Fj0lIE5hMeipwzMITwWPWVgDuGhyikDcwgbPGVgDuHTpCkDc0ibwY/PJfj1smMG5pAWg7/5BdFjB+aQZoNvAmv5xjN+xft4gTmkbfpo9jKdrZrmT8P7GYyw2s0Gi9d2++Chyh4grLbdWLSFkCVs8MDavAX7BmG1+RjsG4TVbulFI+9F81h0dxBWm8+DfYOw2jyS5RuE1eaxaN8grDYb7BuE1eZdtG8QVps7Wb5BWG2+2OAbhNXmgQ7fIKw2D1X6BmG1+WKDbxBWm7dg3yCsNh+DfYOw2nyxwTcIq83nwb5BWG0eyfINwmrzWLRvEFa7pZNF97qz2vreBYTV5rlJvkFYbTbYNwir3XYefDUVfp5WYnV6quTBkKzU9y4grHZLJ2srju3nv/eVkKzucXqTJKPGZKW+dwFhtdt20aZH+h/EKV6exCGKLmL3G/1uxE9Tslrfu4Cw2n0MFuL1cVAmXqTj9clqfe8Cwmr3OQ9epQbHu+CdkAfau9g1Jav1vQsIq93H4K90F/1V2Jjrk+pD4lzL1EFY7V4jWX9lL2v1N7IzuFTfu4Cw2r0M/lDb5CFig1tAWO0+Bp/SXfSJDW4BYbX7GJz59+pkPfOeVTlZre9dQFhtCoOF3IyTE6JDU7Ja37uAsNp9DP4Qf5/SxY9sSGMnLk3Jan3vAsJq9zFYH6pMkpuoMVmp711AWO0Wg29b0T6SpV9suMvLCoeWZKW+dwFhtVtvujMMVXaBDR5Yu9ngLZbG64XusMEDa7ddbPDgLxs8tDbf0eEbhNVuNnhJOGm0rr53AWG1mw0+40jZlkp97wLCarfObDjSb8Ns8MDa9QajDFmT2ODiysJP6/yGy1btBDbYN2jJR2H961s10dDnbdLW4KkrvkF9Ll6rUAhEXUIu6nTqtQuwwb7B6zPfE6YJlALSZTWRf6nXbqHF4LN839ltC2wJ+1pvbDCyL7nPxYBsWU3oYXXaLTQbfFXtUC+5I3TljQ3OliitagiAb4P38jz4LGf3b0E30ZANHs0WvJAjWXv5XsoHv5yyByh8pktUsoY3ON1D76OovoveDTY4/YZqVrasJvSwOu0W2g1+AN8RG9wLFD6h56M+oJoolqxqt9C+i/5Wj6k8Y2kWsuSNDUZU+ZGLWa9v1US1aGNeibZO1j5aS2sfS8LLDm9scFQzIphlofDN/1Cl5KHuyDrLSug24Lc22J92C2033S2xkEfgBeVlQzbYh3YLPFTpG5Q+fWi3wAb7BmG1jU+6i6LlmaxBbPDg2sZnVcpOFt3DZtngobVbb3z/o07ezgJ02zAbPLB2243vx/Ts/BtrsiaxwQNrNxssZEZyns1DlT1AWG3DxQY2uDcIq922BT9Sa2/8zoYeIKy24YK/MnjN72zoAcJqt45FH6XB/OazfiCsdttYNL+zgQKE1W4dqjzGGy+/s6En8Chioc1j0b6BRxEL7ZZOFr+zgQR4FLHQ5gngvoFHEQttNtg38Chiod12HszP6KAAHkUstFs6WcZ3NnSBDaYUsdBu20Xz/GAK4FHEQpsN9g08ilho1xssLEp2gw2mFLHQbnqEA/eiqYBHEQvtJoOvbDAR8ChioV1v8JYfwkIGPIpYaNcb/FizwVTAo4iFNo9k+QYeRSy02WDfwKOIhTZfLvQNPIpYaLPBvoFHEQttNtg38Chioc0G+wYeRSy02WDfwKOIhTYb7Bt4FLHQZoN9A48iFtpssG/gUcRC2/J68GJLdPM7G0wpYqFtaTCopvmzwZQiFtotu+h9+nCO8zL29o8AyTbMBlOKWGg3G3xEdsvdTT5OmGiaPxtMKWKhbZjhn66SUTQXH9hgShELbaurSSrJBncDHkUstNtebZc9wvBTPqySaJo/G0wpYqHd9mo77OXchutWPpL0saTpRrPBlCIW2m0PQnudIX2rkyaSaQ5sMKWIhXb7owzzCeBUb4tmgylFLLR5qNI38Chioc0G+wYeRSy02WDfwKOIhTYb7Bt4FLHQZoN9A48iFtpssG/gUcRCmw32DTyKWGj3e4zSz06Iw12mnoeVWJ2ezclKfe8CPIpYaPeaunIRkpU0cJMko8Zkpb53AR5FLLT7GPwUq9/o+SFO0urdb/S7ET9NyWp97wI8ilho93mM0j9prbQ5ig7KxIvMqE9W63sX4FHEQrvPY5Q+xG+W3Am5n76LXVOyWt+7AI8iFtp9nrKzEtFpJT5kJ0skOvKjPlmt712ARxEL7T4GC7HLOlk2BqsO1wQNLv75r2/VRP0PXpfn3ganbJ0+58GxwfHWe5KH2JluwdD+FXNqEg390rq8Tg3ppt3PYHmIVZ2sWRqc3IqWJLOsbFlNyEUWVlAhaYpTtk77Bf/2dxfucv92qde7pmS1vjECbX+bJvRlu8Go/8Hr8jo0zCVbp+2WHdO7C0+qF/0UG5lMTogOTclqfWMk32Zzn7WlYQuemMHmdxf+it1TuviVDWnsxKUpWa1vjCBboppVF4ApG2zx7sKT6hdvZHJlSlbqGyN4Ld9gC7Z5d+G/jVglw1R3eVnh8GxOVuobI9CXqGTNy+DkeIRXkobpGOzei56Ywe/47kJoyzRVzEIlu7A+L1nWJGlYF+22iw3v9+5CbZvN86KS5Wk3u5KoFm3Mc2+YU7ZOs8Hv+O5ClMYlk8zi0TgLmP5Q5Ru+uxBj1WwQsdBuHap8u3cXYqyaDSIW2nzTnQ7GqtkgYqHNBvsGHkUstNlg38CjiIW28WrSWx2DfQCPIhbaLQYf9QngVLDBlCIW2naPcKB7hyEbTClioW3zEJYjtu5NMtb3LsCjiIW2/WOUaGCDKUUstFsuNmirLIQsYYMpRSy0bR5l+OdtLjb4AB5FLLRbetGfIpm7chUkT6ks1/cuwKOIhbbhxvcllov2u98dYYMpRSy07Z8XzQYbgFP2UNo8VEkGnLKH0maDyYBT9lDabDAZcMoeSpsNJgNO2UNps8FkwCl7KG02mAw4ZQ+lzQaTAafsobTZYDLglD2UdovB50W8uG2BLeEtHWzwwNrNBl/V0JUaqCR0hQ0eWNswdeUs7+bYwuKphpawwQNrNxu8kBNW9oj30w+5IIINHljbcEfHQl0K5gv+NsApeyjtdoMfyR2VbLANcMoeSrt9F/2tJhae5ZvPiGCDB9Zu62Tto7W09pHfX9kfNnhg7db5wZAvtYt30HQbMBs8tHbb/OAlFvIIvKDbftngwbV5qJIMOGUPpc0GkwGn7KG0+zyrsgts8MDafZ5V2QU2eGDtPs+q7AIbPLB2r2dVdoANHli737Mq3WGDB9bmZ1WSAafsobT5WZVkwCl7KG1+ViUZcMoeSpufVUkGnLKH0uZnVZIBp+yhtPlZlWTAKXsobR6LJgNO2UNps8FkwCl7KG02mAw4ZQ+lXW9wco2B+OkNpfpmB5yyh9Jmg8mAU/ZQ2ryLJgNO2UNps8FkwCl7KG02mAw4ZQ+lzQ8EJwNO2UNp8wPByYBT9lDa/EBwMuCUPZQ2PxCcDDhlD6XNDwQnA07ZQ2nzA8HJgFP2UNr8QHAy4JQ9lDY/EJwMOGUPpc0PBCcDTtlDafMDwcmAU/ZQ2jxUSQacsofSZoPJgFP2UNo8Fk0GnLKH0jZOH+XbZm2BU/ZQ2i3TRwXWctoo3/huCZyyh9Jum7qSjUBveaDDBjhlD6VtmHymePDkMxvglD2Udu+LDZdE4XlYidXp2Zys1Dc74JQ9lHbfLfieXpPYCMmqOVmpb3bAKXso7b7H4E1i8EXsfqPfjfhpSlbrmx1wyh5Ku/UhLK9edOMdHR+rxOCDMvEiTk3Jan2zA07ZQ2n3Ow/+Ky6JwTshD7R3sWtKVuubHXDKHkq710jWT7xtJganR2L5UZ9UHxJzk6YKnLKH0u4zFv1c7SIHg0v1zQ44ZQ+l3cfgnbizwTlwyh5Ku9HgY/oiju3+2lD0JP5FbHAOnLKH0m4yOD76JsbGPa2Gl+qIF1l36pn3rMrJan2zA07ZQ2k3GLx+dZ0fR9HgsG7wKT0hOjQlq/XNDjhlD6Vdb/A3RH7qexNo2ktH2f43GdLYiUtTslrf7IBT9lDa9QZvC6/hOLZdTUoPsCu1KW+ak5X6ZgecsofSrjdYFK4A39refJYafJeXFQ7P5mSlvtkBp+yhtJsf4dD8tQ9s8MDabDAZcMoeSrve4EVhF80X/K2AU/ZQ2vUG7/FH+8ZPfLcCTtlDadcbfC10qxaEU/yHNbg4HeP1rZqg8KFBob9wL+3GgY78dXZ7wtcHD2cwtH/FnJoESTejQaG/cC/tpqFKAXFUD3A4LvRBj94MZLDyC0kyy8qW1YRcZGE96nTK7q79Xw609H/1JRsvNqxfc87Wk5jZAG1/myb0ZbvBoPChQaG/cEnkv/97gTz5f64GR9e9vNy//iTcfCOfBiPKtkZkWdrSsAW/o8F+8LgFp0tUs+oCwAZ7wb/BvAUXmKHBHY7BERtMxSAGu/ei2WAqBjK4aiAbTNIQIwP0orW8qGR5dtJbTlSLdmmBU3Z37Xc1uDQumWQWj8ZZwLSHKt/W4NA0tKAhu7s2GxyIhhY0ZHfXZoMD0dCChuzu2m9qcHjglN1dmw0OBJyyu2uzwYGAU3Z3bTY4EHDK7q7NBgcCTtndtdngQMApu7s2GxwIOGV312aDAwGn7O7abHAg4JTdXZsNDgScsrtrs8GBgFN2d2022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B14FCHXZoPdgUcRcm022B0Qi/zX8ExnCm02uAMgFtE80E1gg0MBYhE2eGSAWIQNHhkgFmGDRwaIRdjgkQFiETZ4ZIBYhA0eGSAWYYNHBohF2OCRAWIRNnhkgFiEDR4ZIBZhg0cGiEXY4JEBYhE2eGSAWIQNHhkgFmGDRwaIRdjgkQFiETZ4ZIBYZC4GP08rsTrcVfIQJ0/P5mSlvjEBYpGZGPxcCclKOrxJklFjslLfmACxyEwMPonDM3ruxEcUXcTuN/rdiJ+mZLW+MQFikZkYvFKFnyL+OCgTL+LUlKzWNyZALDITgzOJWGMn5IH2LnZNyWp9YwLEIrMy+EduoCLRkR/1yWp9YwLEIrMyeLd62hmsOlxscF/toQ3eiUvEW3BJZEYGJ/6ywdE8Db7vVskpUNKdeuY9q3KyWt+YALHIXAy+rHb3JHVKT4gOTclqfWMCxCIzMfg33zSTIQ21v65PVusbEyAWmYnBByFePeNk1HITNSYr9Y0JEIvMxGChGXyXlxUO6rJCfbJS35gAschMDO4CG9xXmw3uAIhF2OCRAWIRNnhkgFiEDR4ZIBZhg0cGiEXY4JEBYhE2eGSAWIQNHhkgFmGDRwaIRdjgkQFiETaYCgB131oStX9oTVaHtuRJNpgIRHq7X99aEtLqeh2SxqTQGNzwyNo3MhjaUvvWkpCLLL4iRNIaBZHB/3uBPPm/uRqM0v44YoNnZjCidFeb4mBwYV+dxevanVtVL8IGdwDasjbr9a2ayDtZYIP9Esjg8r9a7Z5oImxwB6Ata7Ne35oTqEjoRXuiibDBHUC27HAMzhJ50TrtnmgibHAHoC1rs17fWhIVicYsdzQRNrgDr160nlfIen1rSVQ1GrLc0UTY4A6geh5c6Bxr32YyVPl2BvuDRFsTYYM7ALpG+NHWRNjgDoCuEX60NRE2eGSAWIQNHhkgFmGDRwaIRdjgkQFiETZ4ZIBYhA0eGSAWYYNHBohF2OCRAWIRNnhkgFhkKIN12OAWQCzCBo8MEIuwwaGAU3ZnbTY4FHDK7qzNBocCTtmdtdngUCBP/tcw9YdEmw0OBPKkzxmAbHAokCdJTGjaDbDBgUCepDH4f7UmsMGhQJ5kg73ABncSZ4MtQZ4cymCzBxbibLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibB8MVYkAAAhZSURBVLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibLAlyJNssBfY4E7ibLAlyJNssBcCP0ZJE2GDvcAGdxNng51F2GAvsMHdxNlgZxESE9jg5vpcAUX1mggb7AU2uJs4G+wswgZ7IYDBFjMA2WAyQhjs0QQ2uLk+V9C14FAGd/bAq7hfg5+HlVidnrX1uYKuBdngBLjVbsVGSFa19dlA8hwNNjgBbrXbcBG73+h3I37q6mtEa8joR5ve3OCDsvYiTnX1NaI1hA0et8E7IQ+/d7Grq68RrSGjN+HNDRai+MEEYDiDuwiQNWU+2p3FQdmIBDZ4TOKgbEQCGzwmcVA2IiHpZD31TpYbUzXhXQw+padJB3ppxhnQSyYDHTtxoZdmnIEHzZXqqG88KDPOwIPmXV5sODzNgYx/ELoBjF8QugGMXxC6AYxfELoBjF8QugGMXxCq4kvc1d79awn4rct0Hv/sPmBaYfXx964S978fq7oAWRdRfS+ZGk23KkDSHnc+kqtaq8bRkI/aPyOkwXFzk8G5g6hXZYNzPsQmtvb5V4jaDTVq+jPCGrxJNtzVhqhxbXU1a07B4J/slrx/4qMhZIwGn9R/x9/4kw1u5yCyo+9ftQWf5H22MiHE/UMlk9sS4g18tSuud6xJL5Cq/FPXuX7UWPnGYcRciB/xFX9+iUui+ncjVn9f0qfX7jRZm6a+xOpLXoDRb1FzaHauF1ex+0m/ntKfwwK4VEvGShQGMnfKTvmzx0dlmTy9DN7JH0Zf71iTViBTeaq8kzqguujJ9uyUTlIsb1Vyo/BHncFfcs1ll/xRHZr90tu97sVRNVnLwaFWOoq/69/08tNfuWL3jL+v0pDkzyis71xTrrKT1zNXcs2PyzXNuIC81C0vdMuyf2VTn+qiWSZdY7D6c9KlU7O1u6vS2tS9yJnol6jtyFeBQ610FP/YTXpo26hddKT9SsnXwvrONeUq/+I97U98IL3EP5vDNU21v71El7i0VM3ua/iQSSn9U2dw8uc8K3+zsa6SwYUqst/IBjjUSsemsIvW7vEpHL70r4X1DuQFchW5DZ7i/eyh4VysWeo3LiNv+06aUnBAa2Dpjyj+FY7NLmpWRM3AoVY6TlknS909PbTB8ii6kk5FjX34Jql4x7h6/eRscCO/2e0Aqju9SXc/mwaDK+sdKO+ilUq8j473tf/E6/+ZtdQh7kF/JEltL6QO6vEfpZtxpzV4lx5gJmJwOtBxP6hNKOujfBUNfmZfK+sdqHayvuSBU6jekhAudyVIqX9xmb+vbs9dLj/kYqV3slbx/5vnjtbgUj9u9AZnvf6D9iU/DUp+pXhbS/+KXqdJrzv9tdOanfrYuN34KUXi7VJ2cTS91T1LHrJf/1Q4aaIxuHCa5CIHh1pJ+bcTq0M2TlkayJDLyyY+3mV/RZ+Bjnwqx0sl3hDlAMWX0x46qXulTk9Svfis5XDPGpgPdMhvB+JjcHGgw0EODrUywXG/lREeWsHQI+Te5vnhNuApgYfGMPR8pZdXne9VhYfGMB74G/eyNif3e5FB3xRmTCB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0AwwANKWui85ir+JOKzrGdS/QAGhkvEFlsMrpbnBjSVtJ56q7t7WkQyPjDVKDPTSDDe4JG9wTIhlvZLvW8xLYXlXWbS8g9rdk/XUrsDi+ItPPJP1njbQQFFmIJlBUTnP2wL6ueBQ9ZMntTQvOdNMyhYC6+m9LLL7jVQss/qggrYTWmFeN/X9AChGPpAZ/J3+x/LHSpPiO8i/LqMbgZbIO55LBukBBOS2+jb9+1hWPbiJJfefBqW5aphBQV/9ZBVz/ZCsKJbTGvJ3B2D+i6xLb+H+8wPYRPbYQj/hL/LOqFceqwUcs4+3i8ancz3SikoCunBUXyuya4pHA8SHXyJLF9iVlCgG19cvNfIu1/M+wVSv0EoXGvNkuWu2Er/LLJ9ZqhfqRPhNjrlhUDV7glitoBhcEdOWsuMqpK35MV/2RJWvaVwyorV82N/5fuU4+SiUKjXkzg/Pfaqn2bFF0lhvAEtdiZKQfg+Pf6vtzWTa4IICCC5FWV03xdRaUbJTV9lUCKvWnx9prllUoUWjMmxmcf3n94YUvdUG3NfJDWa5TK6AbnCbqir9oap8e0FB/4aNQotAYNthksOy+LLbHW0eDa4u7GNxUPxtcoLvBW9ljeeU7G9xU3NS+F80CBYPLWm2VdYFIxhuVH9B0DL5lv5v+veUYXCgcVXL04lnJxvYVAprqL3zUlXhzg0u9aDm6EHdIxavrciwZvC3/wKVetFZNIVVTPCt5rnayki+FgKb6Cx91Jd7c4PJ5cHxmkZw5xueV1+hxfB3NlnIX+ZAjEA9V9JbqlM6DtWoKqZriccl1/PEttM0u141KAU31Fz4KJUoG5735Xj8giYo/qse4dLQH+kiW/DGuaXZm8Dn5/rlQdshhpVRHF2g2uKb4q+Q+b5+mGxUDGusvfOglCo1JauwPiYhHajoxyVByOph0jTeRdFz5FieX53z3LMd11+f4h5Z7wdsi3o1nh8VcoNngmuLJwLHMzNF1SwGN9Rc+tBKFxqQ19gbGCGbSIHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL8gdAMYvyB0Axi/IHQDGL/8PxD6NKaTiSiPAAAAAElFTkSuQmCC" width="240"/>
+<img alt="No description has been provided for this image" class="" height="360" src="data:image/png;base64,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" width="240"/>
 </div>
 </div>
 </div>
@@ -9128,7 +9128,7 @@ Warning message:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">emmeans</span><span class="p">(</span><span class="n">qpcr_mod</span><span class="p">,</span><span class="w">  </span><span class="n">trt.vs.ctrl</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">target_strain</span><span class="p">,</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"response"</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="w"> </span><span class="s">"response"</span><span class="p">)</span><span class="o">$</span><span class="n">contrast</span>
@@ -9165,32 +9165,6 @@ Tests are performed on the log scale </pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="m">1</span><span class="o">/</span><span class="m">4.1</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-0.24390243902439
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9207,7 +9181,7 @@ Tests are performed on the log scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">qpcr_lin_mod_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glmmTMB</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">copies_per_g_fw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rate_num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">target_strain</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">|</span><span class="n">trial</span><span class="o">/</span><span class="n">rep</span><span class="p">),</span>
@@ -9225,7 +9199,7 @@ Tests are performed on the log scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
@@ -9252,7 +9226,7 @@ Tests are performed on the log scale </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">Anova</span><span class="p">(</span><span class="n">qpcr_lin_mod_1</span><span class="p">,</span><span class="s">"III"</span><span class="p">)</span>

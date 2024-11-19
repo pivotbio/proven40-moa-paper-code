@@ -1,8 +1,11 @@
 # Proven40 mode-of-action paper: Analysis Code
 [![https://doi.org/10.5281/zenodo.13350531](https://zenodo.org/badge/DOI/10.5281/zenodo.13350531.svg)](https://doi.org/10.5281/zenodo.10658648)
 
+This repo contains the code used for the analyses that support findings of the paper: 
 
-This repo contains the code used for the analyses that support findings of the paper entitled: "Genetic remodeling of soil diazotrophs enables partial replacement of synthetic nitrogen fertilizer with biological nitrogen fixation in maize"
+> Martinez-Feria, R., Simmonds, M.B., Ozaydin, B. et al. Genetic remodeling of soil diazotrophs enables partial replacement of synthetic nitrogen fertilizer with biological nitrogen fixation in maize. Sci Rep 14, 27754 (2024). [https://doi.org/10.1038/s41598-024-78243-3](https://doi.org/10.1038/s41598-024-78243-3)
+
+
 
 ## Environment set up
 
